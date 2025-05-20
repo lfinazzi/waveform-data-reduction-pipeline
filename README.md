@@ -22,3 +22,5 @@ For each waveform, the following parameters are calculated:
   7. energy (utin16_t)
 
 These are saved in one output file and data is saved in an interleaved way (like the input waveform file), i.e. event1 CH1 trigger (4B), event1 CH2 trigger (4B), event1 CH1 waveform minimum (1B), event1 CH2 waveform minimum (1B), etc. 
+
+This code was used in data analysis used in a peer-reviewed paper available at https://arxiv.org/pdf/2401.01316
