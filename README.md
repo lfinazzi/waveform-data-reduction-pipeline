@@ -1,15 +1,15 @@
 # waveform-data-reduction-pipeline
 Pipeline software to reduce size of data acquired with picoscope 2406B for posterior analysis. This software was designed to go from 6 TB of waveform data acquired in coincidence to 600 GB of important waveform parameters for data analysis in a quantum optics experiment. Inputs are 2*N waveform events and outputs are 2*N set of important waveform parameters. This results in a data size reduction of 88%. 
 
-REQUIREMENTS:
+# Requirements
 
   1. ROOT library for corresponding platform (found in https://root.cern/install/)
 
-INPUT FORMAT OF WAVEFORM DATA:
+# Input format of waveform data
 
 One file for both channels (waveforms) acquired in coincidence with picoscope 2406B. Each event is saved in an interleaved way. This means that CH1's first waveform sample (1B) is followed by CH2's first waveform sample (1B), followed by CH1's second sample (1B), followed by CH2's second sample (1B), and so on. Each event is saved following the previous one. The input file size in Bytes is 2 * NUM_SEGMENTS * SEGMENT_SIZE_IN_SAMPLES (input file size can be changed in functions.h).
 
-PARAMETERS CALCULATED PER EVENT:
+# Parameters calculated per event
 
 For each waveform, the following parameters are calculated:
 
